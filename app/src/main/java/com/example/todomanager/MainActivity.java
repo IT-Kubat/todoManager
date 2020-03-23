@@ -51,4 +51,12 @@ public class MainActivity extends AppCompatActivity implements TaskClickListener
         startActivity(intent);
 
     }
-}
+
+    @Override
+    public void onEditTaskClick(EditTask editTask) {
+        Intent intent = new Intent(this, EditTaskActivity.class);
+        intent.putExtra("task", editTask);
+        startActivity(intent);
+    }
+
+    }

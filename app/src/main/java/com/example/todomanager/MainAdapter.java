@@ -3,7 +3,6 @@ package com.example.todomanager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,6 +18,11 @@ public class MainAdapter extends RecyclerView.Adapter<MainViewHolder> {
         data.add(task);
         notifyDataSetChanged();
 
+    }
+
+    public void editTask(EditTask editTask){
+        data.add(editTask);
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -44,4 +48,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainViewHolder> {
     public int getItemCount() {
         return data.size();
     }
+
+
 }

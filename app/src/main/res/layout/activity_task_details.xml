@@ -72,6 +72,26 @@
         android:layout_margin="3dp"
         app:layout_constraintLeft_toRightOf="@id/details_checkbox_text"/>
 
+    <Button
+        android:id="@+id/btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:onClick="onEdit"
+        app:layout_constraintTop_toBottomOf="@id/details_checkbox_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_save"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:onClick="onSaver"
+        app:layout_constraintTop_toBottomOf="@id/details_checkbox_text"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_edit"/>
+
 
 
 

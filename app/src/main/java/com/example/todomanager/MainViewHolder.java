@@ -16,6 +16,7 @@ public class MainViewHolder extends RecyclerView.ViewHolder {
     CheckBox checkBox;
     TaskClickListener listener;
     Task task;
+    EditTask editTask;
 
 
     public MainViewHolder(@NonNull View itemView) {
@@ -26,8 +27,14 @@ public class MainViewHolder extends RecyclerView.ViewHolder {
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.onTaskClick(task);
+                listener.onEditTaskClick(editTask);
+            }
+        });
 
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onTaskClick(task);
 
 
             }
